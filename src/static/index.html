@@ -14,33 +14,323 @@
 </head>
 
 <body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-left"><img src="img/serlogo.jpg"></a>
+
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+		</div><!-- /.container-fluid -->
+	</nav>
 	<div class="fullpage">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
 							  <div class="carousel-inner">
 							    <div id="1" class="item active">
-							      <div>1</div>
-
-										<div class="form-inline slide-text">
-                      <div class="form-group">
-                        <label for="exampleInputName2">Name</label>
-                          <input type="text" class="form-control" id="name" placeholder="Jane Doe">
-                        </div>
-                      <div class="form-group">
-                        <label for="exampleInputEmail2">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com">
-                      </div>
-                    <button class="btn btn-default" onclick="sendtest()">Send invitation</button>
-                  </div>
+										<form class="form-inline slide-text">
+											<div>
+												<h1>What Is Your Name?</h1>
+											</div>
+											<div class="form-group">
+												<!-- <label for="exampleInputName2">First Name</label> -->
+												<input type="text" class="form-control" id="first" placeholder="First Name">
+											</div>
+											<div class="form-group">
+												<!-- <label for="exampleInputName2">Middle Name</label> -->
+												<input type="text" class="form-control" id="second" placeholder="Middle Name">
+											</div>
+											<div class="form-group">
+												<!-- <label for="exampleInputName2">Middle Name</label> -->
+												<input type="text" class="form-control" id="third" placeholder="Last Name">
+											</div>
+										</form>
 	    						</div>
 									<div id="2" class="item">
-							      <div>2</div>
+										<form class="form-inline slide-text">
+											<div>
+												<h1>Where Are You Located?</h1>
+											</div>
+											<div class="form-group">
+												<!-- <label for="exampleInputName2">First Name</label> -->
+												<input type="text" class="form-control" id="fourth" placeholder="Street Address">
+											</div>
+											<div class="form-group">
+												<!-- <label for="exampleInputName2">Middle Name</label> -->
+												<input type="text" class="form-control" id="fifth" placeholder="City">
+											</div>
+											<div class="form-group">
+												<!-- <label for="exampleInputName2">Middle Name</label> -->
+												<input type="text" class="form-control" id="sixth" placeholder="State">
+											</div>
+										</form>
 	    						</div>
 									<div id="3" class="item">
-							      <div>3</div>
+										<form class="slide-text">
+											<div>
+												<h1>Identification Information</h1>
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Social Security Number</label>
+												<input type="text" class="form-control" id="seventh" placeholder="SSN">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Date of Birth</label>
+												<input type="text" class="form-control" id="eigth" placeholder="mm/dd/yy">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Email Address</label>
+												<input type="email" class="form-control" id="ninth" placeholder="name@example.com">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Mobile Phone</label>
+												<input type="text" class="form-control" id="tenth" placeholder="xxx-xxx-XXXX">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Home Phone</label>
+												<input type="text" class="form-control" id="eleventh" placeholder="xxx-xxx-XXXX">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Work Phone</label>
+												<input type="text" class="form-control" id="twelvth" placeholder="xxx-xxx-XXXX">
+											</div>
+										</form>
 	    						</div>
 									<div id="4" class="item">
-							      <div>4</div>
+										<form class="form slide-text">
+											<div>
+												<h1>Social Media!</h1>
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Twitter</label>
+												<input type="text" class="form-control" id="thirteenth" placeholder="@example">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">Instagram</label>
+												<input type="text" class="form-control" id="fourteenth" placeholder="@example">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputName2">LinkedIn</label>
+												<input type="text" class="form-control" id="fifteenth" placeholder="linkedin.com/in/__">
+											</div>
+										</form>
 	    						</div>
+									<div id="5" class="item">
+										<div class="container-checkbox">
+										<h2>Do you speak any languages other than English?</h2>
+										<div class="row">
+												<div class="form-group">
+														<div class="searchable-container">
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<!-- <label for="check"><img src="picture.png" /></label> -->
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>African Languages</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox"  name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Arabic</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Chinese</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>French</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>German</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Italian</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Japanese</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Korean</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Persian</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Portuguese</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Russian</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Spanish or Spanish Creole</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Vietnemese</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Other</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+																<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+																		<div class="info-block block-info clearfix">
+																				<div data-toggle="buttons" class="btn-group bizmoduleselect">
+																						<label class="btn btn-default">
+																								<div class="bizcontent">
+																										<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+																										<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																										<h5>Not Applicable</h5>
+																								</div>
+																						</label>
+																				</div>
+																		</div>
+																</div>
+
+														</div>
+												</div>
+											</div>
+									</div>
+									</div>
 	  						</div>
 							  <!-- Left and right controls -->
 							  <a class="left carousel-control" id="left" href="#myCarousel" data-slide="prev" onclick="progress('left')">

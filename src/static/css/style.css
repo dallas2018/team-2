@@ -21,3 +21,80 @@ html,body{height:100%;}
   background-color: blue;
   z-index: 10;
 }
+
+.slide-text{
+  font-size: 2em;
+  line-height: 2em;
+  height: 5em;
+  position:absolute;
+  top:25%;
+  left:25%;
+  right:25%;
+  display: table;
+  vertical-align: middle;
+  margin:auto;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+html,body{height:100%;}
+.carousel{}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
+.dropdown{
+  z-index:10;
+  position:relative;
+}
+.navbar {
+  position:absolute;
+  z-index:10;
+  left:0;
+  right:0;
+}
+.fullpage {
+  height:100%;
+  width: 100%;
+}
+
+.carousel-inner{
+  margin: auto;
+}
+
+.slide-text{
+  font-size: 2em;
+  line-height: 2em;
+  height: 5em;
+  position:absolute;
+  top:25%;
+  left:25%;
+  right:25%;
+  display: table;
+  vertical-align: middle;
+  margin:auto;
+}
+
+.form1{
+
+}
+
+.container-checkbox{
+  font-size: 2em;
+  width: 85%;
+  padding-left: 15%;
+}
+
+.searchable-container{margin:20px 0 0 0;}
+.searchable-container label.btn-default.active{background-color:#007ba7;color:#FFF}
+.searchable-container label.btn-default{width:90%;border:0px solid #efefef; border-radius: 25px; margin:5px; float: left;}
+.searchable-container label .bizcontent{width:100%;}
+.searchable-container .btn-group{width:90%;}
+.searchable-container .btn span.glyphicon{
+    opacity: 0;
+}
+.searchable-container .btn.active span.glyphicon {
+    opacity: 1;
+}
