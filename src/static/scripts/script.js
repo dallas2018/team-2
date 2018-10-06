@@ -36,6 +36,7 @@ function progress(dir)
     }
     if (prog == 7){
       $(".right").hide();
+      sendtest(prog);
     }
     else {
       $(".right").show();
@@ -107,8 +108,35 @@ function sendtest(prog)
       }
     }
   }
+  console.log("Prog: "+ prog);
 
+  if (prog == 7)
+  {
+    var id = localStorage.getItem("user_id");
+    var firstParam = document.getElementById("first").value;
+    var thirdParam = document.getElementById("ninth").value;
 
+    var email = {
+      "user_id" : id,  //actual id
+      "data" : {
+        "user_first_name" : firstParam,
+        "user_email" : thirdParam,
+      }
+    }
+    console.log(email);
+    console.log("emailing...");
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:5000/email",
+      data: JSON.stringify(email),
+      contentType: "application/json",
+      success: function(data){
+        var returnedId = data['result']['user_id'];
+        localStorage.setItem("user_id" , returnedId);
+        console.log("storing returned id: " + data);
+      }
+    });
+  }
   console.log(dataNew);
 
   console.log("Beginning ajax call")
