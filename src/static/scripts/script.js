@@ -1,4 +1,5 @@
 var prog = 0;
+localStorage.clear();
 
 $(document).ready(function() {
   $("#progressbar").css("width", 0 + "%");
@@ -25,21 +26,21 @@ function progress(dir)
   }
   if(dir == 'right' && prog < 5)
   {
-    if(sendtest(prog)){
-      prog++;
-      if (prog == 0){
-        $(".left").hide();
-      }
-      else {
-        $(".left").show();
-      }
-      if (prog == 4){
-        $(".right").hide();
-      }
-      else {
-        $(".right").show();
-      }
-  }
+    sendtest(prog);
+    prog++;
+    if (prog == 0){
+      $(".left").hide();
+    }
+    else {
+      $(".left").show();
+    }
+    if (prog == 4){
+      $(".right").hide();
+    }
+    else {
+      $(".right").show();
+    }
+
   }
   console.log(prog);
   $("#progressbar").css("width", prog*25 + "%");
@@ -47,7 +48,7 @@ function progress(dir)
 
 function sendtest(prog)
 {
-  var url = "http://129.114.104.6:5000/submit"
+  var url = "http://localhost:5000/submit"
   if(prog == 0)
   {
     var firstParam = document.getElementById("first").value;
@@ -62,8 +63,8 @@ function sendtest(prog)
       "user_id" : "new_user",
       "data" : {
         "user_first_name" : firstParam,
-        "user_last_name" : secondParam,
-        "user_middle_name" : thirdParam
+        "user_last_name" : secondParam
+        // "user_middle_name" : thirdParam
       }
     }
   }
@@ -72,17 +73,16 @@ function sendtest(prog)
     var firstParam = document.getElementById("fourth").value;
     var secondParam = document.getElementById("fifth").value;
     var thirdParam = document.getElementById("sixth").value;
+    var id = localStorage.getItem("user_id");
     if(firstParam == "" || secondParam == "" || thirdParam == "")
     {
       window.alert("You have not filled in the last form completely, go back and please fill it out!")
       return false;
     }
     var dataNew = {
-      "user_id" : "new_user",  //actual id
+      "user_id" : id,  //actual id
       "data" : {
-        "user_street" : firstParam,
-        "user_city" : secondParam,
-        "user_state" : thirdParam
+        "user_location": firstParam + " " + secondParam + " " + thirdParam
       }
     }
   }
@@ -93,6 +93,8 @@ function sendtest(prog)
     var thirdParam = document.getElementById("ninth").value;
     var fourthParam = document.getElementById("tenth").value;
     var fifthParam = document.getElementById("eleventh").value;
+    var id = localStorage.getItem("user_id");
+
     if(firstParam == "" || secondParam == "" || thirdParam == "")
     {
       window.alert("You have not filled in the last form completely, go back and please fill it out!");
@@ -128,10 +130,11 @@ function sendtest(prog)
         "user_linkedin" : thirdParam
       }
     }
-
   }
 
   console.log(dataNew);
+
+  console.log("Beginning ajax call")
 
   $.ajax({
   type: "POST",
@@ -139,7 +142,9 @@ function sendtest(prog)
   data: JSON.stringify(dataNew),
   contentType: "application/json",
   success: function(data){
-    console.log(data);
+    var returnedId = data['result']['user_id']
+    localStorage.setItem("user_id" , returnedId);
+    console.log("storing returned id: " + returnedId);
   }
 });
 

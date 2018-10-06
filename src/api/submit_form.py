@@ -3,6 +3,7 @@ import os, time
 from functools import wraps
 from flask import Flask, request, abort, jsonify
 import MySQLdb
+from flask_cors import CORS
 
 # API_KEY = b'HahaTeehee'
 #
@@ -17,6 +18,7 @@ import MySQLdb
 
 
 app = Flask(__name__)
+CORS(app)
 
 def insert_dict_toDB(connection, table_name, info_dict):
     features = []
@@ -52,7 +54,6 @@ def update_to_db(conn, table_name, info_dict, condition):
         if pairs:
             update = " , ".join("{} = {}".format(kv[0], kv[1]) for kv in pairs)
             query = "update {} set {} where {}".format(table_name, update, condition)
-            print("Query:", query)
             cur = conn.cursor()
             # conn.set_character_set('utf8')
             # cur.execute('SET NAMES utf8;')
