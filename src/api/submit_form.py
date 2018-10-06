@@ -79,7 +79,7 @@ def email():
         server.login(ser_email, ser_password)
 
         #Send the mail
-        msg = "Hello" + user_first_name +"! /n Your information will be sent SER Houston. We will be reaching out to you in the meantime. /n Best Wishes, /n SER Houston" # The /n separates the message from the headers
+        msg = "Hello" + user_first_name +"! \n Your information will be sent SER Houston. We will be reaching out to you in the meantime. /n Best Wishes, /n SER Houston" # The /n separates the message from the headers
         server.sendmail(ser_email, user_email, msg)
         server.close()
         response = {
