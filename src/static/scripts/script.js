@@ -24,7 +24,7 @@ function progress(dir)
       $(".right").show();
     }
   }
-  if(dir == 'right' && prog < 7)
+  if(dir == 'right' && prog < 8)
   {
     sendtest(prog);
     prog++;
@@ -34,7 +34,7 @@ function progress(dir)
     else {
       $(".left").show();
     }
-    if (prog == 6){
+    if (prog == 7){
       $(".right").hide();
     }
     else {
@@ -43,7 +43,7 @@ function progress(dir)
 
   }
   console.log(prog);
-  $("#progressbar").css("width", prog*17 + "%");
+  $("#progressbar").css("width", prog*15 + "%");
 }
 
 function sendtest(prog)
@@ -63,12 +63,12 @@ function sendtest(prog)
       "user_id" : "new_user",
       "data" : {
         "user_first_name" : firstParam,
-        "user_last_name" : secondParam
+        "user_last_name" : thirdParam
         // "user_middle_name" : thirdParam
       }
     }
   }
-  else if(prog == 1) //change this to be take user id from here
+  else if(prog == 2) //change this to be take user id from here
   {
     var firstParam = document.getElementById("fourth").value;
     var secondParam = document.getElementById("fifth").value;
@@ -86,7 +86,7 @@ function sendtest(prog)
       }
     }
   }
-  else if(prog == 2)
+  else if(prog == 3)
   {
     var secondParam = document.getElementById("eigth").value;
     var thirdParam = document.getElementById("ninth").value;
@@ -99,7 +99,7 @@ function sendtest(prog)
       return false;
     }
     var dataNew = {
-      "user_id" : "new_user",  //actual id
+      "user_id" : id,  //actual id
       "data" : {
         "user_dob" : secondParam,
         "user_email" : thirdParam,
@@ -107,20 +107,7 @@ function sendtest(prog)
       }
     }
   }
-  // else if(prog == 3)
-  // {
-  //   if(firstParam == "")
-  //   {
-  //     window.alert("You have not filled in the last form completely, go back and please fill it out!");
-  //     return false;
-  //   }
-  //   var dataNew = {
-  //     "user_id" : "new_user",  //actual id
-  //     "data" : {
-  //       "user_twitter" : firstParam
-  //     }
-  //   }
-  // }
+
 
   console.log(dataNew);
 
