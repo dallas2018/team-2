@@ -1,5 +1,5 @@
 import requests, json
-import os, time
+import os, time, sys
 from functools import wraps
 from flask import Flask, request, abort, jsonify
 import MySQLdb
@@ -8,7 +8,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-sql_db_password = 'TeeheeHahaha'
+sql_db_password = '$password'
 sql_db_name = 'jpmc'
 
 def insert_dict_toDB(connection, table_name, info_dict):
@@ -69,6 +69,7 @@ def submit_form():
         form_data = request.get_json().get("data")
 
         # Establish connection to sql db
+        sql_db_password = sys.argv[1]
         conn = MySQLdb.connect('localhost', 'root', sql_db_password, sql_db_name, port=3306)
         cur = conn.cursor()
         conn.set_character_set('utf8')
