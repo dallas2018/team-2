@@ -11,3 +11,16 @@ html,body{height:100%;}
   height:100%;
   width: 100%;
 }
+
+.carousel-inner{
+  margin: auto;
+}
+
+.slide-text{
+  font-size: 2em;
+  line-height: 2em;
+  height: 5em;
+  display: table;
+  vertical-align: middle;
+  margin:auto;
+}
