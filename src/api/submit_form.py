@@ -24,8 +24,8 @@ def insert_dict_toDB(connection, table_name, info_dict):
     for x in info_dict.items():
         field = x[0]
         value = x[1]
-        features.append("{}".format(field))
-        values.append("'{}'".format(value))
+        features.append("{}".format(str(field)))
+        values.append("'{}'".format(str(value)))
 
     f = ",".join(features)
     v = ",".join(values)
@@ -33,23 +33,26 @@ def insert_dict_toDB(connection, table_name, info_dict):
     if values:
         #print "values:  ", values
         cur = connection.cursor()
+        cur.execute("SELECT COUNT(*) FROM USER")
+        res = cur.fetchone()
+
         query = "insert into {}({}) values({});".format(table_name, f, v)
 
         cur.execute(query)
         connection.commit()
+        return (res[0] + 1)
 
 def update_to_db(conn, table_name, info_dict, condition):
     try:
         keys, values = zip(*[kv for kv in info_dict.items() if kv[1] not in (None, "", "null")])
         temp = []
         for v in values:
-            try: formated = v.replace('\\', '\\\\').replace('"', '\\"').encode('utf-8')
-            except Exception: formated = v
-            temp.append('"{}"'.format(formated))
+            temp.append('"{}"'.format(v))
         pairs = zip(keys, temp)
         if pairs:
             update = " , ".join("{} = {}".format(kv[0], kv[1]) for kv in pairs)
             query = "update {} set {} where {}".format(table_name, update, condition)
+            print("Query:", query)
             cur = conn.cursor()
             # conn.set_character_set('utf8')
             # cur.execute('SET NAMES utf8;')
@@ -72,9 +75,7 @@ def submit_form():
 
         # Gets the current user in session and value they gave
         user_id = request.get_json().get("user_id")
-        print(user_id)
         form_data = request.get_json().get("data")
-        print(form_data)
 
         # Establish connection to sql db
         conn = MySQLdb.connect('localhost', 'root', '@JPMC_team2_2018', 'jpmc', port=3306)
@@ -84,11 +85,11 @@ def submit_form():
         # new user, create row in database
         try:
             if (str(user_id) == "new_user"):
-                insert_dict_toDB(conn, "USER", form_data)
+                user_id = insert_dict_toDB(conn, "USER", form_data)
                 response = {
                     "status": "ok",
                     "result": {
-                        "user_id": user_id,
+                        "user_id": str(user_id),
                         "message": "Successfully inserted user info to database!"
                     }
                 }
