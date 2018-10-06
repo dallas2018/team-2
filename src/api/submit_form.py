@@ -5,6 +5,8 @@ from flask import Flask, request, abort, jsonify
 import MySQLdb
 from flask_cors import CORS
 
+import smtplib
+
 # API_KEY = b'HahaTeehee'
 #
 # def require_apikey(api_function):
@@ -67,7 +69,6 @@ def update_to_db(conn, table_name, info_dict, condition):
         return False
 
 
-
 @app.route("/submit", methods=["GET", "POST"])
 def submit_form():
     if request.method == "GET":
@@ -111,6 +112,25 @@ def submit_form():
             }
             abort(400, response)
         return jsonify(response)
+
+@app.route("/email", methods=["GET", "POST"])
+def submit_form():
+    if request.method == "GET":
+        abort(405, "method not allowed")
+    if request.method == "POST":
+
+        user_id = request.get_json().get("user_id")
+        user_email = request.get_json().get("data")["user_email"]
+        user_first_name = request.get_json().get("data")["user_first_name"]
+
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+
+        #Next, log in to the server
+        server.login("youremailusername", "password")
+
+        #Send the mail
+        msg = "Hello" + user_first_name +"! /n Your information will be sent SER Houston. We will be reaching out to you in the meantime. /n Best Wishes, /n SER Houston" # The /n separates the message from the headers
+        server.sendmail("you@gmail.com", user_email, msg)
 
 @app.errorhandler
 def custom_error_handler():
