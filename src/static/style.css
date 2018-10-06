@@ -43,3 +43,21 @@ html,body{height:100%;}
 .form1{
 
 }
+
+.container-checkbox{
+  font-size: 2em;
+  width: 85%;
+  padding-left: 15%;
+}
+
+.searchable-container{margin:20px 0 0 0;}
+.searchable-container label.btn-default.active{background-color:#007ba7;color:#FFF}
+.searchable-container label.btn-default{width:90%;border:0px solid #efefef; border-radius: 25px; margin:5px; float: left;}
+.searchable-container label .bizcontent{width:100%;}
+.searchable-container .btn-group{width:90%;}
+.searchable-container .btn span.glyphicon{
+    opacity: 0;
+}
+.searchable-container .btn.active span.glyphicon {
+    opacity: 1;
+}
