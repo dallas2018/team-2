@@ -5,20 +5,11 @@ from flask import Flask, request, abort, jsonify
 import MySQLdb
 from flask_cors import CORS
 
-# API_KEY = b'HahaTeehee'
-#
-# def require_apikey(api_function):
-#     @wraps(api_function)
-#     def decorated_function(*args, **kwargs):
-#         if request.headers.get("X-API-KEY") == API_KEY:
-#             return api_function(*args, **kwargs)
-#         else:
-#             abort(401)
-#     return decorated_function
-
-
 app = Flask(__name__)
 CORS(app)
+
+sql_db_password = 'TeeheeHahaha'
+sql_db_name = 'jpmc'
 
 def insert_dict_toDB(connection, table_name, info_dict):
     features = []
@@ -67,7 +58,6 @@ def update_to_db(conn, table_name, info_dict, condition):
         return False
 
 
-
 @app.route("/submit", methods=["GET", "POST"])
 def submit_form():
     if request.method == "GET":
@@ -79,7 +69,7 @@ def submit_form():
         form_data = request.get_json().get("data")
 
         # Establish connection to sql db
-        conn = MySQLdb.connect('localhost', 'root', '@JPMC_team2_2018', 'jpmc', port=3306)
+        conn = MySQLdb.connect('localhost', 'root', sql_db_password, sql_db_name, port=3306)
         cur = conn.cursor()
         conn.set_character_set('utf8')
 
