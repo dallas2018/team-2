@@ -17,14 +17,14 @@ function progress(dir)
     else {
       $(".left").show();
     }
-    if (prog == 4){
+    if (prog == 5){
       $(".right").hide();
     }
     else {
       $(".right").show();
     }
   }
-  if(dir == 'right' && prog < 5)
+  if(dir == 'right' && prog < 7)
   {
     sendtest(prog);
     prog++;
@@ -34,7 +34,7 @@ function progress(dir)
     else {
       $(".left").show();
     }
-    if (prog == 4){
+    if (prog == 6){
       $(".right").hide();
     }
     else {
@@ -43,7 +43,7 @@ function progress(dir)
 
   }
   console.log(prog);
-  $("#progressbar").css("width", prog*25 + "%");
+  $("#progressbar").css("width", prog*17 + "%");
 }
 
 function sendtest(prog)
@@ -88,14 +88,12 @@ function sendtest(prog)
   }
   else if(prog == 2)
   {
-    var firstParam = document.getElementById("seventh").value;
     var secondParam = document.getElementById("eigth").value;
     var thirdParam = document.getElementById("ninth").value;
     var fourthParam = document.getElementById("tenth").value;
-    var fifthParam = document.getElementById("eleventh").value;
     var id = localStorage.getItem("user_id");
 
-    if(firstParam == "" || secondParam == "" || thirdParam == "")
+    if(secondParam == "" || thirdParam == "")
     {
       window.alert("You have not filled in the last form completely, go back and please fill it out!");
       return false;
@@ -103,34 +101,26 @@ function sendtest(prog)
     var dataNew = {
       "user_id" : "new_user",  //actual id
       "data" : {
-        "user_ssn" : firstParam,
         "user_dob" : secondParam,
         "user_email" : thirdParam,
-        "user_mobile_phone" : fourthParam,
-        "user_home_phone" : fifthParam
+        "user_phone" : fourthParam
       }
     }
   }
-  else if(prog == 3)
-  {
-    var firstParam = document.getElementById("twelvth").value;
-    var secondParam = document.getElementById("thirteenth").value;
-    var thirdParam = document.getElementById("fourteenth").value;
-    var fourthParam = document.getElementById("fifteenth").value;
-    if(firstParam == "" || secondParam == "" || thirdParam == "")
-    {
-      window.alert("You have not filled in the last form completely, go back and please fill it out!");
-      return false;
-    }
-    var dataNew = {
-      "user_id" : "new_user",  //actual id
-      "data" : {
-        "user_twitter" : firstParam,
-        "user_insta" : secondParam,
-        "user_linkedin" : thirdParam
-      }
-    }
-  }
+  // else if(prog == 3)
+  // {
+  //   if(firstParam == "")
+  //   {
+  //     window.alert("You have not filled in the last form completely, go back and please fill it out!");
+  //     return false;
+  //   }
+  //   var dataNew = {
+  //     "user_id" : "new_user",  //actual id
+  //     "data" : {
+  //       "user_twitter" : firstParam
+  //     }
+  //   }
+  // }
 
   console.log(dataNew);
 
