@@ -33,7 +33,7 @@ html,body{height:100%;}
   line-height: 2em;
   height: 5em;
   position:absolute;
-  top:25%;
+  top:15%;
   left:25%;
   right:25%;
   display: table;
@@ -76,4 +76,13 @@ html,body{height:100%;}
 }
 .searchable-container .btn.active span.glyphicon {
     opacity: 1;
+}
+
+.testimonial{
+  font-size:20px;
+}
+
+.dent{
+  text-align: center;
+  
 }
