@@ -1,0 +1,98 @@
+*{
+margin:0;
+padding:0;
+}
+
+html,body{height:100%;}
+.carousel{}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
+.dropdown{
+z-index:10;
+position:relative;
+}
+.navbar {
+padding: 20px;
+z-index:10;
+left:0;
+right:0;
+margin-bottom: 0;
+}
+.fullpage {
+height:100%;
+width: 100%;
+}
+
+.carousel-inner{
+margin: auto;
+}
+
+.slide-text{
+font-size: 2em;
+line-height: 2em;
+height: 5em;
+position:absolute;
+left:25%;
+right:25%;
+display: table;
+vertical-align: middle;
+margin:auto;
+color:#e3683f;
+font-family: 'Lato', sans-serif;
+
+
+}
+
+.carousel-control.right{
+background-image:linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+background-color: #0487a9;
+width: 8%;
+}
+
+.carousel-control.left{
+background-image:linear-gradient(to left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+background-color: #0487a9;
+width: 8%;
+}
+
+.container-checkbox{
+font-size: 2em;
+width: 85%;
+padding-left: 15%;
+padding-top: 5%;
+font-family: 'Lato', sans-serif;
+color:#e3683f;
+}
+
+.btn-default {
+    background-image: linear-gradient(to bottom,#fff 0,#f4c5b5 100%);
+}
+
+.searchable-container{margin:20px 0 0 0;}
+.searchable-container label.btn-default.active{background-color:#e3683f;color:#FFF}
+.searchable-container label.btn-default{width:90%;border:0px solid #efefef; border-radius: 50px; margin:5px; float: left;}
+.searchable-container label .bizcontent{width:100%;}
+.searchable-container .btn-group{width:90%;}
+.searchable-container .btn span.glyphicon{
+  opacity: 0;
+}
+.searchable-container .btn.active span.glyphicon {
+  opacity: 1;
+}
+
+
+.testimonial{
+font-size:20px;
+}
+
+.dent{
+text-align: center;
+}
+
+#progressbar {
+position: relative;
+width: 100%;
+height: 10px;
+background-color: #bccf7f;
+}

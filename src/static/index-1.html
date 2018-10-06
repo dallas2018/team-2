@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Code for Good</title>
+	<meta name="keywords" content="Jobs, job search">
+	<meta name="description" content="find jobs">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-left"><img src="img/serlogo.jpg"></a>
+
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="progressbar"></div>
+	<div class="fullpage">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false">
+			<div class="carousel-inner" id="scec17Pics">
+				<div class="item active">
+					<div class="container">
+						<div class="col-md-6">
+							<form class="form slide-text">
+								<div>
+									<h1>What Is Your Name?</h1>
+								</div>
+								<div style="color:black;" class="form-group">
+									<label for="exampleInputName2">First Name</label>
+									<input type="text" class="form-control input-lg " id="first" placeholder="First Name">
+								</div>
+								<div style="color:black;" class="form-group">
+									<label for="exampleInputName2">Middle Name</label>
+									<input type="text" class="form-control input-lg" id="second" placeholder="Middle Name">
+								</div>
+								<div style="color:black;" class="form-group">
+									<label for="exampleInputName2">Last Name</label>
+									<input type="text" class="form-control input-lg" id="third" placeholder="Last Name">
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="item">
+					<div class="container-checkbox">
+						<h2>What's your biggest barrier from seeking employment?</h2>
+						<div class="row">
+							<div class="form-group">
+								<div class="searchable-container">
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Housing</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Transportation</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Skills</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Limited Mobility</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Childcare</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Slide 2 Onward  -->
+				<div class="item">
+					<form class="form slide-text">
+						<div>
+							<h1>Where Are You Located?</h1>
+						</div>
+						<div style="color:black;" class="form-group">
+							<label for="exampleInputName2">Address</label>
+							<input type="text" class="form-control input-lg" id="fourth" placeholder="Street Address">
+						</div>
+						<div style="color:black;" class="form-group">
+							<label for="exampleInputName2">City</label>
+							<input type="text" class="form-control input-lg" id="fifth" placeholder="City">
+						</div>
+						<div style="color:black;" class="form-group">
+							<label for="exampleInputName2">State</label>
+							<input type="text" class="form-control input-lg" id="sixth" placeholder="State">
+						</div>
+
+					</form>
+				</div>
+				<div class="item">
+					<form class="slide-text">
+						<div>
+							<h1>Identification Information</h1>
+						</div>
+						<div style="color:black;" class="form-group">
+							<label for="exampleInputName2">Date of Birth</label>
+							<input type="text" class="form-control input-lg" id="eigth" placeholder="mm/dd/yy">
+						</div>
+						<div style="color:black;" class="form-group">
+							<label for="exampleInputName2">Email Address</label>
+							<input type="email" class="form-control input-lg" id="ninth" placeholder="name@example.com">
+						</div>
+						<div style="color:black;" class="form-group">
+							<label for="exampleInputName2">Mobile Phone</label>
+							<input type="text" class="form-control input-lg" id="tenth" placeholder="xxx-xxx-XXXX">
+						</div>
+
+					</form>
+				</div>
+				<div class="item">
+						<div class="container slide-text testimonial">
+							<h1>Success Stories</h1>
+							<img class="dent" src="img/dentonious.jpg" alt=":/">
+							<div style="color:black;" >
+								<p>Originally from Waterloo, Iowa, <a href="http://serhouston.org/dentonious-washington/" target="_blank">Dentonious</a> was seeking a second-chance at life. </p>
+								<p>After spending 17 years in federal prison,Dentonious was released to the Leidel </p>
+								<p> Residential Reentry Center in Houston and was anxious to get back out into the world.</p>
+								<p></p>
+								<p>After consulting with SER,in only 4 months, Dentonious was able to get welding lessons
+								<p>and is now a certified professional. </p>
+							</div>
+
+						</div>
+
+				</div>
+				<!-- Languages  -->
+				<div class="item">
+					<div class="container-checkbox">
+						<h2>Do you speak any languages other than English?</h2>
+						<div class="row">
+							<div class="form-group">
+								<div class="searchable-container">
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>African Languages</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Arabic</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Chinese</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>French</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>German</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Italian</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Japanese</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Korean</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Persian</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Portuguese</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Russian</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Spanish or Creole</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Vietnemese</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Other</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Not Applicable</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end language div -->
+
+
+				<div class="item">
+					<div class="container-checkbox">
+						<h2>Do you need any special accommodations in order to participate in training or performing tasks at work?</h2>
+						<div class="row">
+							<div class="form-group">
+								<div class="searchable-container">
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Visual</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Hearing</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Speech</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Limited Mobility</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+										<div class="info-block block-info clearfix">
+
+											<div data-toggle="buttons" class="btn-group bizmoduleselect">
+												<label class="btn btn-default">
+													<div class="bizcontent">
+														<input type="checkbox" id="check" name="var_id[]" autocomplete="off" value="">
+														<!-- <label for="check"><img src="picture.png" /></label> -->
+														<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+														<h5>Not Applicable</h5>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end special accomdoations div -->
+
+				<div class="item">
+						<div class="container slide-text testimonial">
+							<h1>You're done!</h1>
+							<br>
+							<p>Here are some helpful links to start your path with SER. We will be in contact with you as soon as possible!</p>
+							<a href="http://serhouston.org/impact/">Impact Stories</a>
+							<br>
+							<a href="http://serhouston.org/ser-about-page/who-we-are/staff/ser-staff/">Who We Are</a>
+						</div>
+				</div>
+				<!-- public benefits div -->
+
+
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev" onclick="progress('left')">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next" onclick="progress('right')">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="scripts/script.js"></script>
+		<!--<script>
+			//Once user scrolls down or up, the background of the top navbar will change and
+			//the navbar will still be on the top of the page
+			$(function() {
+				//Adding scec17 pictures
+				var scec_17_pics = '';
+				for (var i = 2; i <= 50; i++) {
+					if (i <= 40) {
+						scec_17_pics += '<div class="item"><img src="../img/photos/' + i + '.JPEG" alt="SCEC17 Pictures"></div>';
+					} else {
+						scec_17_pics += '<div class="item"><img src="../img/photos/' + i + '.jpeg" alt="SCEC17 Pictures"></div>';
+					}
+				}
+				$('#scec17Pics').append(scec_17_pics);
+			});
+		</script>-->
+</body>
+
+</html>
