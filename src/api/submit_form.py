@@ -4,6 +4,7 @@ from functools import wraps
 from flask import Flask, request, abort, jsonify
 import MySQLdb
 from flask_cors import CORS
+import smtplib
 
 app = Flask(__name__)
 CORS(app)
@@ -57,6 +58,38 @@ def update_to_db(conn, table_name, info_dict, condition):
         print("\033[91mException:", condition, e, '\033[0m')
         return False
 
+
+@app.route("/email", methods=["GET", "POST"])
+def email():
+    if request.method == "GET":
+        abort(405, "method not allowed")
+    if request.method == "POST":
+        print("Response.JSON: ", request.get_json())
+        user_id = request.get_json().get("user_id")
+        user_email = request.get_json().get("data")["user_email"]
+        user_first_name = request.get_json().get("data")["user_first_name"]
+
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.ehlo()
+        server.starttls()
+
+        #Next, log in to the server
+        ser_email = 'jerry94571@gmail.com'
+        ser_password = sys.argv[2]
+        server.login(ser_email, ser_password)
+
+        #Send the mail
+        msg = "Hello" + user_first_name +"! /n Your information will be sent SER Houston. We will be reaching out to you in the meantime. /n Best Wishes, /n SER Houston" # The /n separates the message from the headers
+        server.sendmail(ser_email, user_email, msg)
+        server.close()
+        response = {
+            "status": "ok",
+            "result": {
+                "user_id": user_id,
+                "message": "Successfully sent email to user after onboarding"
+            }
+        }
+        return jsonify(response)
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit_form():
