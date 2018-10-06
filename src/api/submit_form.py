@@ -42,7 +42,7 @@ def update_to_db(conn, table_name, info_dict, condition):
             conn.commit()
         return True
     except Exception as e:
-        print "\033[91mException:", condition, e, '\033[0m'
+        print("\033[91mException:", condition, e, '\033[0m')
         return False
 
 
