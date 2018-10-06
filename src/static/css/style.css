@@ -1,43 +1,6 @@
 *{
-  margin:0;
-  padding:0;
-}
-
-html,body{height:100%;}
-.carousel,.item,.active{height:100%;}
-.carousel-inner{height:100%;}
-
-.fullpage {
-  height:100%;
-  width: 100%;
-}
-
-#progressbar {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 20px;
-  background-color: blue;
-  z-index: 10;
-}
-
-.slide-text{
-  font-size: 2em;
-  line-height: 2em;
-  height: 5em;
-  position:absolute;
-  top:25%;
-  left:25%;
-  right:25%;
-  display: table;
-  vertical-align: middle;
-  margin:auto;
-}
-
-*{
-  margin:0;
-  padding:0;
+margin:0;
+padding:0;
 }
 
 html,body{height:100%;}
@@ -46,45 +9,61 @@ html,body{height:100%;}
 .carousel-inner{height:100%;}
 
 .dropdown{
-  z-index:10;
-  position:relative;
+z-index:10;
+position:relative;
 }
 .navbar {
-  position:absolute;
-  z-index:10;
-  left:0;
-  right:0;
+padding: 20px;
+z-index:10;
+left:0;
+right:0;
+margin-bottom: 0;
 }
 .fullpage {
-  height:100%;
-  width: 100%;
+height:100%;
+width: 100%;
 }
 
 .carousel-inner{
-  margin: auto;
+margin: auto;
 }
 
 .slide-text{
-  font-size: 2em;
-  line-height: 2em;
-  height: 5em;
-  position:absolute;
-  top:25%;
-  left:25%;
-  right:25%;
-  display: table;
-  vertical-align: middle;
-  margin:auto;
+font-size: 2em;
+line-height: 2em;
+height: 5em;
+position:absolute;
+top:15%;
+left:25%;
+right:25%;
+display: table;
+vertical-align: middle;
+margin:auto;
+color:#e3683f;
+font-family: 'Lato', sans-serif;
+
+
 }
 
-.form1{
+.carousel-control.right{
+background-image:linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+background-color: #1e73be;
+width: 10%;
+}
 
+.carousel-control.left{
+background-image:linear-gradient(to left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+background-color: #1e73be;
+width: 10%;
 }
 
 .container-checkbox{
-  font-size: 2em;
-  width: 85%;
-  padding-left: 15%;
+font-size: 2em;
+width: 85%;
+padding-left: 15%;
+padding-top: 5%;
+font-family: 'Lato', sans-serif;
+color:#e3683f;
 }
 
 .searchable-container{margin:20px 0 0 0;}
@@ -93,8 +72,23 @@ html,body{height:100%;}
 .searchable-container label .bizcontent{width:100%;}
 .searchable-container .btn-group{width:90%;}
 .searchable-container .btn span.glyphicon{
-    opacity: 0;
+  opacity: 0;
 }
 .searchable-container .btn.active span.glyphicon {
-    opacity: 1;
+  opacity: 1;
+}
+
+.testimonial{
+font-size:20px;
+}
+
+.dent{
+text-align: center;
+}
+
+#progressbar {
+position: relative;
+width: 100%;
+height: 10px;
+background-color: blue;
 }
