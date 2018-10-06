@@ -22,6 +22,12 @@ def submit_form():
     if request.method == "GET":
         abort(405, "method not allowed")
     if request.method == "POST":
+
+        # Get parameters from form
+        
+
+
+
         response = {
             "status": "ok",
             "result": "wow you submitted a form congrats omg!"
