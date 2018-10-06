@@ -18,8 +18,25 @@ import MySQLdb
 
 app = Flask(__name__)
 
-def insert_into_db():
-    pass
+def insert_dict_toDB(connection, table_name, info_dict):
+    features = []
+    values = []
+    for x in info_dict.items():
+        field = x[0]
+        value = x[1]
+        features.append("{}".format(field))
+        values.append("'{}'".format(value))
+
+    f = ",".join(features)
+    v = ",".join(values)
+    #try:
+    if values:
+        #print "values:  ", values
+        cur = connection.cursor()
+        query = "insert into {}({}) values({});".format(table_name, f, v)
+
+        cur.execute(query)
+        connection.commit()
 
 def update_to_db(conn, table_name, info_dict, condition):
     try:
@@ -34,16 +51,17 @@ def update_to_db(conn, table_name, info_dict, condition):
             update = " , ".join("{} = {}".format(kv[0], kv[1]) for kv in pairs)
             query = "update {} set {} where {}".format(table_name, update, condition)
             cur = conn.cursor()
-            conn.set_character_set('utf8')
-            cur.execute('SET NAMES utf8;')
-            cur.execute('SET CHARACTER SET utf8;')
-            cur.execute('SET character_set_connection=utf8;')
+            # conn.set_character_set('utf8')
+            # cur.execute('SET NAMES utf8;')
+            # cur.execute('SET CHARACTER SET utf8;')
+            # cur.execute('SET character_set_connection=utf8;')
             cur.execute(query)
             conn.commit()
         return True
     except Exception as e:
         print("\033[91mException:", condition, e, '\033[0m')
         return False
+
 
 
 @app.route("/submit", methods=["GET", "POST"])
@@ -53,23 +71,30 @@ def submit_form():
     if request.method == "POST":
 
         # Gets the current user in session and value they gave
-        form_data = request.form.get("data")
-        user_id = request.form.get("user_id")
+        user_id = request.get_json().get("user_id")
+        print(user_id)
+        form_data = request.get_json().get("data")
+        print(form_data)
 
         # Establish connection to sql db
-        conn = MySQLdb.connect('localhost', 'root', 'password', 'ser')
+        conn = MySQLdb.connect('localhost', 'root', '@JPMC_team2_2018', 'jpmc', port=3306)
         cur = conn.cursor()
         conn.set_character_set('utf8')
-        cur.execute('SET NAMES utf8;')
-        cur.execute('SET CHARACTER SET utf8;')
-        cur.execute('SET character_set_connection=utf8;')
 
         # new user, create row in database
         try:
-            if (user_id == "new_user"):
-                pass
+            if (str(user_id) == "new_user"):
+                insert_dict_toDB(conn, "USER", form_data)
+                response = {
+                    "status": "ok",
+                    "result": {
+                        "user_id": user_id,
+                        "message": "Successfully inserted user info to database!"
+                    }
+                }
             else:
-                update_to_db(conn, 'USERS', info_dict, 'user_id = "{}"'.format(user_id))
+                # info_dict = json.loads(form_data)
+                update_to_db(conn, 'USER', form_data, 'user_id = "{}"'.format(user_id))
                 response = {
                     "status": "ok",
                     "result": {
@@ -80,7 +105,7 @@ def submit_form():
         except Exception as e:
             response = {
                 "status": "error",
-                "result": "Could not save user to database!"
+                "error": e
             }
             abort(400, response)
         return jsonify(response)
